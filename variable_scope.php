@@ -28,11 +28,12 @@ display_value('p', $var);
 // Pass by value
 display_value('h3', 'Pass by value');
 function bar($var) {
+  display_value('p', $var);
   // This will NOT change the global $var because it is passed by value.
   $var = 'Changing the value of a variable passed by value.';
   display_value('p', $var);
 }
-foo();
+bar($var);
 
 // Global variable is NOT changed.
 display_value('p', $var);
