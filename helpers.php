@@ -1,6 +1,6 @@
 <?php
 
-error_reporting(E_ERROR);
+//error_reporting(E_ERROR);
 
 function display_value($tag, $value) {
   print "<$tag>$value</$tag>\n";

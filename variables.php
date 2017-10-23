@@ -34,7 +34,7 @@ $hour_of_day = date('G');
 if ($hour_of_day > 120) {
   $greeting = 'Good afternoon';
 }
-display_value('p', $greeting); // This will emit an E_NOTICE warning.
+display_value('p', $greeting); // This will emit an E_NOTICE undefined variable notice.
 
 // Good practice.
 $greeting = ''; // Initialise variable with default value.

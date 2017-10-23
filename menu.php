@@ -5,5 +5,7 @@
     <span><a href="predefined_variables.php">Predefined Variables</a> | </span>
     <span><a href="variable_variables.php">Variable Variables</a> | </span>
     <span><a href="constants.php">Constants</a> | </span>
+    <span><a href="class_constants.php">Class Constants</a> | </span>
+    <span><a href="magic_constants.php">Magic Constants</a></span>
   </li>
 </ul>

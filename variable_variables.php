@@ -4,11 +4,7 @@
 require './helpers.php';
 require './menu.php';
 
-/*
- *
- */
-
-// As well as naming variable statically, you can also name them dynamically using the contents of another variable.
+// As well as naming variables statically, you can also name them dynamically using the contents of another variable.
 $foo = 'bar';
 display_value('p', $foo);
 
