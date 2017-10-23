@@ -13,6 +13,7 @@ require './menu.php';
 // $GLOBALS variable is an associative array of built in values as well as any global scope user defined variables.
 display_value('h3', '$GLOBALS variable');
 $var = 'This is a global scope variable'; // This variable will now be available within the $GLOBALS variable.
+display_value('p', $var);
 display_value('p', $GLOBALS['var']);
 
 // $_SERVER is an associative array of variables with information such as headers, paths, hostname, IP addresses, etc.
@@ -49,7 +50,7 @@ if (isset($_POST['upload'])) {
 // $_COOKIE is an associative array of variables passed via HTTP Cookies to the current script.
 display_value('h3', '$_COOKIE variable');
 // You can set a cookie on the client side using the setcookie method and then read the value at a later date or time.
-//setcookie("SimpleCookie", "Example of setting a cookie.");
+setcookie("SimpleCookie", "Example of setting a cookie.");
 if (! empty($_COOKIE)) {
   var_dump($_COOKIE);
 }
@@ -60,7 +61,7 @@ if (! empty($_REQUEST)) {
   var_dump($_REQUEST);
 }
 
-// $_COOKIE is an associative array containing session variables available to the current script.
+// $_SESSION is an associative array containing session variables available to the current script.
 display_value('h3', '$_SESSION variable');
 // You must begin a session using the session_start() function before you can add data to the $_SESSION Superglobal.
 if (! session_id()) {
@@ -81,11 +82,11 @@ if (! empty($_ENV)) {
 // PHP also has the putenv() and getenv() functions. However, you cannot access variables created using the putenv() function
 // within the $_ENV array.
 putenv('bar=foo');
-display_value('p', getenv(('foo')));
+display_value('p', getenv('bar'));
 
 var_dump($_ENV['bar']); // This is NULL as it is not set.
 
-// $http_response_header in an associative array of variables that contain response headers..
+// $http_response_header in an associative array of variables that contain response headers.
 display_value('h3', '$http_response_header variable');
 // In the example below, $http_response_header will contain HTTP response headers returned from answers.com.
 function response_headers() {
