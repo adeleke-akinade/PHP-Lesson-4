@@ -31,7 +31,7 @@ display_value('h2', 'Initialising variables with a default value');
 
 // Bad practice.
 $hour_of_day = date('G');
-if ($hour_of_day > 120) {
+if ($hour_of_day > 12) {
   $greeting = 'Good afternoon';
 }
 display_value('p', $greeting); // This will emit an E_NOTICE undefined variable notice.
