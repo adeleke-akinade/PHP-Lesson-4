@@ -17,6 +17,7 @@ display_value('p', $foo . ' ' . ${$foo});
 
 // You can access arrays using variable variables.
 $bar = array(1, 2, 3, 4, 5);
+display_value('p', $bar[0]);
 display_value('p', ${$foo}[0]);
 
 // You can also use variable variables to access class properties.
@@ -27,6 +28,8 @@ class foo {
 
 $obj = new foo;
 $array = 'array';
+display_value('p', $obj->bar);
 display_value('p', $obj->$foo);
+
 display_value('p', $obj->$array[1]);
 display_value('p', ($obj->$array[1] * $obj->$array[2]));
