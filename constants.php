@@ -42,7 +42,7 @@ display_value('p', FOO5);
 define('FOO6', (FOO4 > FOO5));
 display_value('p', var_export(FOO6, true));
 
-// As of PHP 7.0.0, you can assign arrays to constants created using the define function.
+// As of PHP 7.0.0, you can assign arrays to constants created using the define() function.
 define('FOO7', array(1, 2, 3));
 define('FOO8', range(1, 3));
 display_values('p', FOO7);
@@ -52,13 +52,12 @@ display_values('p', FOO8);
 // You can read more about it on the php.net site, https://secure.php.net/manual/en/language.constants.syntax.php, if
 // you like.
 
-// The second way of creating a constant is using the const keyword. This is available outside of class definitions only
-// and requires PHP 5.3.0 or later.
+// The second way of creating a constant is using the const keyword. This is available as of PHP 5.3.0 or later.
 display_value('h3', 'Using the const keyword');
 const BAR = 'bar';
 display_value('p', BAR);
 
-// Prior to PHP 5.6.0, creating a constant using the const keyword only allowed you to assign scalar data or NULL to the.
+// Prior to PHP 5.6.0, creating a constant using the const keyword only allowed you to assign scalar data or NULL to the
 // constant As of PHP 5.6.0, you can assign the result of a scalar expression, or, an array, to a constant when created
 // using the const keyword.
 const BAR2 = BAR . ', bar2';
@@ -104,11 +103,11 @@ display_value('p', constant('FOOBAR') . ': ' . __LINE__); // The same thing as t
 
 // You can use it to check if a constant exists as NULL is considered false. However, it will cause an E_WARNING couldn't
 // find constant error if the constant does not exist so it not advised.
-if ( constant('FOOBAR20')) {
+if (constant('FOOBAR20')) {
   display_value('p', FOOBAR20 . ': ' . __LINE__);
 }
 else {
-  display_value('p', 'FOOBAR is undefined: ' . __LINE__);
+  display_value('p', 'FOOBAR20 is undefined: ' . __LINE__);
 }
 
 // You can get all defined constants using get_defined_constants() function. It returns an associative array.
