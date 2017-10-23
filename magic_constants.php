@@ -18,7 +18,8 @@ namespace Foo {
   display_value('p', 'Directory: ' . __DIR__); // This will output the parent directory of the file in which it resides.
 
   function bar() {
-    display_value('p', 'Function: ' . __FUNCTION__); // This will output the fully qualified name of the function that it exists within.
+    // This will output the fully qualified name of the function that it exists within.
+    display_value('p', 'Function: ' . __FUNCTION__);
   }
   bar();
 
@@ -32,8 +33,11 @@ namespace Foo {
     use Bar;
 
     public function __construct() {
-      display_value('p', 'Class: ' . __CLASS__); // This will output the fully qualified name of the class that it exists within.
-      display_value('p', 'Method: ' . __METHOD__); // This will output the fully qualified name of the method that it exists within.
+      // This will output the fully qualified name of the class that it exists within.
+      display_value('p', 'Class: ' . __CLASS__);
+
+      // This will output the fully qualified name of the method that it exists within.
+      display_value('p', 'Method: ' . __METHOD__);
     }
   }
 
